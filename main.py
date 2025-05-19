@@ -2,7 +2,7 @@ import google.generativeai as genai
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 # Configurar Gemini con tu clave de API
-genai.configure(api_key="AIzaSyDDCFWywdGLaonTswlBeTqeNpoOpXmoJSg")
+genai.configure(api_key="TU_API_KEY")
 
 # Crear el modelo de Gemini
 model = genai.GenerativeModel("gemini-2.0-flash")
@@ -71,7 +71,7 @@ async def handle_message(update: Update, context: CallbackContext):
 # Función principal para configurar y ejecutar el bot de Telegram
 def main():
     # Crear el objeto Application con el token de tu bot
-    application = Application.builder().token("7999346906:AAFwfVAQ2p0k5kJsBZNgndqgMAyCPWpyEZg").build()
+    application = Application.builder().token("TU_TOKEN_TELEGRAM").build()
 
     # Manejar el comando '/start'
     application.add_handler(CommandHandler("start", start))
